@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#app {
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    gap: .05em;
+}
+div#buttons {
+    display: grid;
+    gap: .05em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+button.btn {
+    transition: all .3s;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 100em;
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Noto sans', 'sans-serif';
+}
+button.btn:hover {
+    background: #555;
+    transition: all 0s;
+}
+button.btn.light-btn {
+    background: #888;
+    color: #000;
+}
+button.btn.light-btn:hover {
+    background: #bbb;
+}
+button.btn.orange-btn {
+    background: #f90;
+    color: #fff;
+    font-size: .18em;
+}
+button.btn.orange-btn:hover {
+    background: #fb5;
+}
+button.btn.orange-btn.op-btn:focus {
+    background: #fff;
+    color: #f90;
+}
+span#out {
+    color: #fff;
+    text-align: right;
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    padding: 0 7px;
+    font-weight: 300;
+    line-height: 1;
+    font-family: 'Noto sans', 'sans-serif';
+    grid-column: 1 / span 4;
+    cursor: text;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: 0;
+}
+span#out::-webkit-scrollbar {
+    width: 0;
+}
